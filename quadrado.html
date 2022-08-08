@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+
+<script>
+	function mostra(texto){
+		document.write(texto);
+	}
+	function pulaLinha(quantidade){
+		for(var i=0; i<quantidade;i++){
+			document.write("<br>");
+		}
+	}
+	function quadrado(linhas, colunas){
+		var indiceLinha;
+		var indiceColuna;
+		var inOut;
+		for(indiceLinha=0; indiceLinha<linhas; indiceLinha++){
+			mostra("*");
+			
+			for(indiceColuna=0;indiceColuna<colunas-2;indiceColuna++){
+				if(indiceLinha!=linhas){
+					mostra("");
+				}
+
+			}
+			mostra("*");
+			pulaLinha(1);
+			
+
+		}
+
+		
+		
+
+	}
+	quadrado(50, 50);
+</script>

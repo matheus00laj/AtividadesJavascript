@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script>
+	
+	function mostra(texto){
+		document.write(texto);
+		pulaLinha(1)
+	}
+	function pulaLinha(quantidade){
+		for(var i=0; i<quantidade;i++){
+			document.write("<br>");
+		}
+	}
+	var controle = true;
+    var primeiraCopa = 1930;
+    var contador = 1;
+    while(contador<=40){
+ 
+    	if(primeiraCopa>=1930 && primeiraCopa<1939){
+    		mostra(primeiraCopa + ", ano da " + contador + "ª copa.");
+    		contador++;
+    	}
+    	if (primeiraCopa>=1939 && primeiraCopa<=1949){
+    		mostra(primeiraCopa+", Neste ano não teve copa");
+    	}
+    	if (primeiraCopa>1950){
+    		mostra(primeiraCopa + ", ano da " + contador + "ª copa.");
+    		contador++;
+    	}
+    	primeiraCopa=primeiraCopa+4;
+    }
+
+
+
+
+
+
+
+
+</script>

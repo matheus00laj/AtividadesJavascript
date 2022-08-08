@@ -1,0 +1,91 @@
+<meta charset="utf-8">
+
+
+
+<input/>
+<button>opa, meu querido.</button>
+
+
+
+
+<script>
+	function mostra(texto){
+		document.write(texto);
+	}
+	function pulaLinha(quantidade){
+		for(var i=0; i<quantidade;i++){
+			document.write("<br>");
+		}
+	}
+
+	function sorteio(){
+		return Math.round(Math.random()*200);
+	}
+	function sorteiaNumeros(qtde){
+		var segredos=[];
+		var numero=1;
+
+		while(numero<= qtde){
+			var aleatorio = sorteio();
+			var achou=false;
+			for(var i=0; i<=numero;i++){
+				if(aleatorio==segredos[i]){
+					achou=true;
+
+				}
+			}
+			if (achou==false) {
+				segredos.push(aleatorio);
+			}
+
+			numero++;
+		}
+		return segredos;
+	}
+	var segredos;
+	var quantidade = Math.round(Math.random()*10);
+	if(quantidade!=0){
+		segredos = sorteiaNumeros(quantidade);
+	}
+	console.log(segredos);
+	
+
+	var entrada= document.querySelector("input");
+	entrada.focus();
+	var botao = document.querySelector("button");
+	
+	function verificar(){
+		var indice;
+		var acertar=false;
+		for(indice=0;indice<segredos.length;indice++){
+			if(entrada.value==segredos[indice]){
+				acertar	= true;
+				break;
+			}
+			else{
+				acertar=false;
+			}
+			
+		}
+		if(acertar==true){
+			alert("ACERTOU!");
+		}
+		else{
+			alert("ERROU!");
+		}
+		entrada.value = "";
+		entrada.focus();
+	}
+	botao.onclick = verificar;
+	
+
+
+
+
+
+
+
+
+
+
+</script>

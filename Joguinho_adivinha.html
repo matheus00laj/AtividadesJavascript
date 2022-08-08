@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+
+<script>
+	function mostra(texto){
+		document.write(texto);
+		pulaLinha(1)
+	}
+	function pulaLinha(quantidade){
+		for(var i=0; i<quantidade;i++){
+			document.write("<br>");
+		}
+	}
+	var controle = true;
+	var numeroPensado=Math.round(Math.random()*100);
+	var controlador= Math.round(Math.random()*3);
+	var contador=0;
+	do{
+		contador=contador+1;
+		var chute=parseInt(prompt("Digite um numero entre 1 e "+ (Math.round(numeroPensado*controlador))));
+		if(chute>=1 && chute<numeroPensado){
+			alert("chute um numero maior!");
+			mostra(contador +"º chute: "+chute);
+		}
+		else if(chute>numeroPensado && chute<=Math.round(numeroPensado*controlador)){
+			alert("chute um numero menor!");
+			mostra(contador +"º chute: "+chute);
+		}
+		else if(chute == numeroPensado){
+			alert("ACERTOU!");
+			mostra(contador +"º e último chute: "+chute);
+			controle = false;
+		}
+	}while(controle);
+
+
+
+
+
+
+
+</script>

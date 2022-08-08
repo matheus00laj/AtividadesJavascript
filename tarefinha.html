@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+
+<script>
+	function escrever(texto){
+		document.write("<big>"+texto+"</big>");
+	}
+	function pularLinha(numero){
+		for(var i=0; i>0; i++){
+			document.write("<br>");
+		}
+	}
+	var anos=1500;
+	var anoatual=2022;
+	var idadeGeracao=28;
+	var quantidadeGeracoes = (anoatual-anos)/idadeGeracao;
+	escrever("de "+ anos + " até "+ anoatual+" se passaram "+ Math.round(quantidadeGeracoes)+ " gerações");
+
+</script>

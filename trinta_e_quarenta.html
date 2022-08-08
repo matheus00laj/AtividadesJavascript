@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+
+<script>
+	function mostra(texto){
+		document.write(texto);
+		pulaLinha(1)
+	}
+	function pulaLinha(quantidade){
+		for(var i=0; i<quantidade;i++){
+			document.write("<br>");
+		}
+	}
+
+	var numero=30;
+
+	while(numero<=40){
+		if(numero==33 || numero==37){
+			numero++;
+		}
+		mostra(numero);
+		numero++;
+	}
+
+
+
+
+</script>

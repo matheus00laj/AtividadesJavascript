@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+
+<script>
+	function pularLinha(numero){
+		var i;
+		for(i=0; i<numero; i++){
+			document.write("<br>");
+		}
+	}
+	function mostrar(texto){
+		document.write(texto);
+		pularLinha(1);
+	}
+	var ano = 2022;
+	var idadeMatheus=ano-2000;
+	var idadeKarla = ano-1998;
+	var idadeBel =  ano-2009;
+	var nome = "matheus";
+	var media = (idadeMatheus+idadeBel+idadeKarla)/3;
+	mostrar("matheus tem "+idadeMatheus+" Anos");
+	
+	mostrar("karla tem "+idadeKarla+" Anos");
+	
+	mostrar("bel tem "+idadeBel+" Anos");
+	
+	mostrar("a media das idades é:" + Math.round(media));
+	
+	mostrar("a idade de "+nome+ " é" + idadeMatheus);
+
+</script>
